@@ -1,31 +1,62 @@
-using JetBrains.Annotations;
+using System.Runtime.CompilerServices;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private float controlSpeed = 50f; // Speed of movement
+    private float controlSpeed = 50f;
+    [SerializeField]
+    private float xClampRange = 35f;
+    [SerializeField]
+    private float yClampRange = 35f;
+
+    [SerializeField]
+    private float controlRollFactor = 20f;
+    [SerializeField]
+    private float controlPitchFactor = 18f;
+    [SerializeField]
+    private float rotationSpeed = 10f;
+
+
+
+
 
     Vector2 movement;
 
     void Update()
     {
         ProcessTranslation();
+        ProcessRotation();
     }
 
 
     public void OnMove(InputValue value)
     {
-        Debug.Log("OnMove called with value: " + value.Get<Vector2>());
         movement = value.Get<Vector2>();
     }
     private void ProcessTranslation()
     {
         float xOffset = movement.x * controlSpeed * Time.deltaTime;
-        float yOffset = movement.y * controlSpeed * Time.deltaTime;
+        float rawXPos = transform.localPosition.x + xOffset;
+        float clampedXPos = Mathf.Clamp(rawXPos, -xClampRange, xClampRange);
 
-        transform.localPosition = new Vector3(transform.localPosition.x + xOffset, transform.localPosition.y + yOffset, 0f);
+
+        float yOffset = movement.y * controlSpeed * Time.deltaTime;
+        float rawYPos = transform.localPosition.y + yOffset;
+        float clampedYPos = Mathf.Clamp(rawYPos, -yClampRange, yClampRange);
+
+        transform.localPosition = new Vector3(clampedXPos, clampedYPos, 0f);
+    }
+
+    private void ProcessRotation()
+    {
+        float roll = movement.x * -controlRollFactor;
+        float pitch = movement.y * -controlPitchFactor;
+
+        Quaternion targetRotation = Quaternion.Euler(pitch, 0f, roll);
+        transform.localRotation = Quaternion.Lerp(transform.localRotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
 }
