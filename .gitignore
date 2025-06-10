@@ -76,7 +76,8 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # ignore Imported Assests folder
-Assets/Imported Assets
+/[Aa]ssets/[Ii]mported [Aa]ssets/
+
 
 
 
