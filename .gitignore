@@ -76,7 +76,7 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # ignore Imported Assests folder
-/Assets/Imported Assets
+/[Aa]ssets/[Ii]mported Assets
 
 # Ignore the HDRPDefaultResources folder
 # We are not using the assests in this folder, we are only using the URP assets from the terrain package download.
