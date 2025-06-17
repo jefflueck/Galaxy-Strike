@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CollisionHandler : MonoBehaviour
@@ -8,7 +7,10 @@ public class CollisionHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // Use the other object's position (the player)
         Instantiate(destroyedVFX, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
+
+
 }
