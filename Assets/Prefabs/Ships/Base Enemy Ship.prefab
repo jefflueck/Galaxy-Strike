@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5142042794464510989}
   - component: {fileID: 4681090426810631966}
+  - component: {fileID: 1012861880033711499}
+  - component: {fileID: 3751564283108792348}
   m_Layer: 0
   m_Name: Base Enemy Ship
   m_TagString: Untagged
@@ -55,6 +57,40 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &1012861880033711499
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2361178928583398919}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 11.34, y: 4.33, z: 18.34}
+  m_Center: {x: 0, y: 2.69, z: 0}
+--- !u!114 &3751564283108792348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2361178928583398919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90aae7a6a1a424ddb89d43122056444e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyedVFX: {fileID: 2043576186088855820, guid: c2f0f10a5901647bdbd9ddb16f3256f9, type: 3}
 --- !u!1 &2558867010274790530
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,7 +102,6 @@ GameObject:
   - component: {fileID: 4292118559234627539}
   - component: {fileID: 9071182090469167662}
   - component: {fileID: 7870633307452714289}
-  - component: {fileID: 1700073742119443825}
   m_Layer: 0
   m_Name: Placeholder Cube
   m_TagString: Untagged
@@ -142,27 +177,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1700073742119443825
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2558867010274790530}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5719995471668955545
 GameObject:
   m_ObjectHideFlags: 0
