@@ -1,4 +1,0 @@
-repository "Galaxy Strike/Galaxy Strike@2475795764116@cloud"
-  path "/"
-    br "/main"
-    co "/main"

@@ -85,6 +85,11 @@ crashlytics-build.properties
 # We are not using the assests in this folder, we are only using the URP assets from the terrain package download.
 [Aa]ssets/[Ss]ettings/HDRPDefaultResources
 
+# User settings and configuration files
+/[Uu]ser[Ss]ettings/CloudBuildSettings.asset
+ignore.conf
+.plastic/
+
 
 
 
