@@ -6,18 +6,18 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private float controlSpeed = 50f;
+    private float controlSpeed = 30f;
     [SerializeField]
-    private float xClampRange = 35f;
+    private float xClampRange = 17.5f;
     [SerializeField]
-    private float yClampRange = 35f;
+    private float yClampRange = 12.5f;
 
     [SerializeField]
-    private float controlRollFactor = 20f;
+    private float controlRollFactor = 9f;
     [SerializeField]
-    private float controlPitchFactor = 18f;
+    private float controlPitchFactor = 10f;
     [SerializeField]
-    private float rotationSpeed = 10f;
+    private float rotationSpeed = 5f;
 
 
 

@@ -8,6 +8,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1012861880033711499, guid: 181f1a6e018794ccf820e4efa81f3c06, type: 3}
+      propertyPath: m_Size.x
+      value: 16.849194
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012861880033711499, guid: 181f1a6e018794ccf820e4efa81f3c06, type: 3}
+      propertyPath: m_Size.y
+      value: 5.407887
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012861880033711499, guid: 181f1a6e018794ccf820e4efa81f3c06, type: 3}
+      propertyPath: m_Size.z
+      value: 17.621407
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012861880033711499, guid: 181f1a6e018794ccf820e4efa81f3c06, type: 3}
+      propertyPath: m_Center.x
+      value: -0.23953056
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012861880033711499, guid: 181f1a6e018794ccf820e4efa81f3c06, type: 3}
+      propertyPath: m_Center.y
+      value: 2.6301172
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012861880033711499, guid: 181f1a6e018794ccf820e4efa81f3c06, type: 3}
+      propertyPath: m_Center.z
+      value: 1.3174171
+      objectReference: {fileID: 0}
     - target: {fileID: 2361178928583398919, guid: 181f1a6e018794ccf820e4efa81f3c06, type: 3}
       propertyPath: m_Name
       value: Enemy 1
